@@ -10,7 +10,11 @@ export default defineConfig({
   plugins: [
     vue(),
     webUpdateNotice({
-      logVersion: true,
+      notificationProps: {
+        title: 'system update',
+        description: 'System update, please refresh the page',
+        buttonText: 'refresh',
+      },
     }),
     VitePWA({
       devOptions: {
